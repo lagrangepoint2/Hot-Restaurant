@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reservation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-3">Hot Restaurant</h1>
+            <p class="lead">Current reservations and waiting list</p>
+            <hr class="my-2">
+            <p>More info</p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="/tables" role="button">View Tables</a>
+                <a class="btn btn-primary btn-lg" href="/" role="button">Home</a>
+            </p>
+        </div>
+        </br>
+        <hr>
+        </br>
+        <div class="card">
+            <h3 class="card-header">Table Reservation Info:</h3>
+            <div class="card">
+                <div class="card-block" id="">
+                    <form>
+                        <div class="form-group">
+                            <label for=""><h6>Name:</h6></label>
+                            <input type="text" class="form-control" name="name" id="name" aria-describedby="helpId" placeholder="">
+                            <small id="helpId" class="form-text text-muted">*Full Name Required</small>
+                        </div>
+                        <div class="form-group">
+                            <label for=""><h6>Phone:</h6></label>
+                            <input type="text" class="form-control" name="phone" id="phone" aria-describedby="helpId" placeholder="">
+                            <small id="helpId" class="form-text text-muted">*Required (xxx-xxx-xxxx)</small>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label for=""><h6>Email:</h6></label>
+                            <input type="text" class="form-control" name="email" id="email" aria-describedby="helpId" placeholder="">
+                            <small id="helpId" class="form-text text-muted">*Required</small>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label for=""><h6>Reservation ID:</h6></label>
+                            <input type="text" class="form-control" name="resid" id="res-id" aria-describedby="helpId" placeholder="">
+                            <small id="helpId" class="form-text text-muted">*Required</small>
+                        </div>
+                        <hr>
+
+                        <button type="submit" class="btn btn-primary" id="submit-btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </br>
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
