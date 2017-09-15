@@ -28,7 +28,7 @@
         <div class="card">
             <h3 class="card-header">Current Reservations:</h3>
             <div class="card">
-                <div class="card-block" id="">
+                <div class="card-block" id="reserve">
                 </div>
             </div>
         </div>
@@ -36,7 +36,7 @@
     <div class="card">
             <h3 class="card-header">Wait List:</h3>
             <div class="card">
-                <div class="card-block" id="">
+                <div class="card-block" id="waitlist">
                 </div>
             </div>
         </div>
@@ -44,8 +44,41 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script>
+        $.get("/api/reservation", function(data) {
+            console.log(data);
+            var btn = "<button id='delete' role='button'>delete</button>"
+            createReservation(data, btn);
+            
+            $("body").on("click", "#delete", function() {
+                var id = $(this).closest(".card-text").attr("id");
+                $.ajax({
+                    method: 'DELETE',
+                    url: "/api/deletereservation/" + id
+                }).then(function(data) {
+                    $(this).closest(".card-text").remove();
+                    $('#reserve').html('')
+                    $('#waitlist').html('')
+                    //location.reload();
+                    createReservation(data, btn);
+                    
+                })
+                
+            });
+        function createReservation(data, btn) {
+            for(var i = 0; i < data.length; i++) {
+                console.log(data[i])
+                if(i < 5) {
+                    $("#reserve").append("<p class='card-text' id=" + data[i].reservationID + ">" + data[i].reservationID + btn + "</p>");
+                } else {
+                    $("#waitlist").append("<p class='card-text'>" + data[i].reservationID + "</p>");
+                }
+            }
+        }
+            
+        })
+    </script>
 </body>
 
 </html>
