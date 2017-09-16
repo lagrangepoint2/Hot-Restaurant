@@ -1,6 +1,7 @@
 // npm packages
 var bodyParser = require("body-parser");
 var path = require("path");
+var url = require("url");
 var express = require("express");
 var app = express();
 // set port
@@ -18,5 +19,5 @@ require("./app/routing/htmlRoutes.js")(app);
 
 // app 'listening' for port to run application on
 app.listen(port, function() {
-   console.log("App listening on PORT " + port); 
+  console.log("App listening on PORT " + port);
 });
