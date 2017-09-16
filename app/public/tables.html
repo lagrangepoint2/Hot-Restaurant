@@ -66,18 +66,18 @@
                 })
                 
             });
-        function createReservation(data, btn) {
-            for(var i = 0; i < data.length; i++) {
-                console.log(data[i])
-                if(i < 5) {
-                    $("#reserve").append("<p class='card-text' id=" + data[i].reservationID + ">" + data[i].reservationID + btn + "</p>");
-                } else {
-                    $("#waitlist").append("<p class='card-text'>" + data[i].reservationID + "</p>");
-                }
-            }
-        }
             
-        })
+            function createReservation(data, btn) {
+                for(var i = 0; i < data.length; i++) {
+                    console.log(data[i])
+                    if(i < 5) {
+                        $("#reserve").append("<p class='card-text' id=" + data[i].reservationID + ">" + data[i].reservationID + btn + "</p>");
+                    } else {
+                        $("#waitlist").append("<p class='card-text'>" + data[i].reservationID + "</p>");
+                    }
+                }
+            }    
+        });
     </script>
 </body>
 
