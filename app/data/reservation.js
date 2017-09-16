@@ -1,3 +1,3 @@
-var reservations = ["TEST"];
+var reservations = [];
 
 module.exports = reservations;
