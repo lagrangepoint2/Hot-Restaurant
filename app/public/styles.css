@@ -7,10 +7,6 @@ body {
   font-family: "Cambay", sans-serif;
 }
 
-.menu {
-  display: inline;
-}
-
 .display-1 {
   font-size: 300px;
   opacity: 0.65;
@@ -27,13 +23,16 @@ a {
 a:link {
   color: #fff;
 }
+
 a:visited {
   color: #fff;
 }
+
 a:hover {
   color: #fff;
   text-decoration: underline;
 }
+
 a:active {
   color: #fff;
   text-decoration: underline;
@@ -43,15 +42,7 @@ a:active {
   height: 100%;
   background-position: center center;
   background-size: cover;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("./images/index.jpg");
-}
-
-.block2 {
-  height: 100%;
-  background-image: url(http://www.youwall.com/papel/forest_wallpaper_8d927.jpg);
-  background-position: center bottom;
-  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/index.jpg");
 }
 
 .jumbotron {
@@ -62,16 +53,19 @@ a:active {
   top: 100px;
 }
 
-.position-2 {
+
+/* position-2 CSS */
+
+/* .position-2 {
   position: absolute;
   top: 160px;
   right: 0px;
 
   left: 1250px;
-  /* width: 200px; */
-  /* height: 100px; */
 }
 
-.navbar-nav li {
-  float: left;
-}
+.menu {
+  display: inline;
+} */
+
+/* End position-2 CSS */
